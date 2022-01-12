@@ -7,6 +7,10 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+app.get("/api/heartbeat", (req, res) => {
+  res.status(200).json({ message: "I am up and running!" });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
